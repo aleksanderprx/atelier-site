@@ -105,7 +105,7 @@ export function ServicesPage() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
             className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
           >
             What We Offer
@@ -113,7 +113,7 @@ export function ServicesPage() {
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease }}
+            transition={{ duration: 0.9, delay: 0.35, ease }}
             className="font-heading text-6xl md:text-7xl text-studio-black mb-6"
           >
             Our <span className="italic">Services</span>
@@ -121,13 +121,13 @@ export function ServicesPage() {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="w-24 h-[1px] bg-gold mx-auto mb-6"
           />
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="font-body text-lg text-gray-500"
           >
             Comprehensive interior design solutions tailored to your unique
@@ -141,10 +141,10 @@ export function ServicesPage() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: index * 0.1, ease }}
-              viewport={{ once: true, margin: "-50px" }}
+              initial={{ opacity: 0, y: 60, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, delay: index * 0.2, ease }}
+              viewport={{ once: true, margin: "-80px" }}
               whileHover={{ y: -6, transition: { duration: 0.3 } }}
               className="bg-white rounded-2xl p-10 shadow-lg hover:shadow-2xl transition-shadow duration-500 group"
             >
@@ -167,9 +167,9 @@ export function ServicesPage() {
                 {service.features.map((feature, fi) => (
                   <motion.li
                     key={feature}
-                    initial={{ opacity: 0, x: -10 }}
+                    initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: 0.3 + fi * 0.05 }}
+                    transition={{ duration: 0.5, delay: 0.3 + fi * 0.1 }}
                     viewport={{ once: true }}
                     className="flex items-center gap-3 font-body text-gray-600"
                   >
@@ -195,36 +195,42 @@ export function ServicesPage() {
 
       <section className="bg-white py-32">
         <div className="max-w-6xl mx-auto px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <p className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4">
+          <div className="text-center mb-20">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
+            >
               How We Work
-            </p>
-            <h2 className="font-heading text-5xl md:text-6xl text-studio-black mb-4">
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.15, ease }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="font-heading text-5xl md:text-6xl text-studio-black mb-4"
+            >
               Our <span className="italic">Process</span>
-            </h2>
+            </motion.h2>
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              viewport={{ once: true, margin: "-80px" }}
               className="w-24 h-[1px] bg-gold mx-auto"
             />
-          </motion.div>
+          </div>
 
           <div className="space-y-8">
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.number}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.7, delay: index * 0.08, ease }}
-                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.8, delay: index * 0.15, ease }}
+                viewport={{ once: true, margin: "-60px" }}
                 className="flex flex-col md:flex-row items-start gap-6 group"
               >
                 <motion.div

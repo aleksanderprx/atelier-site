@@ -27,10 +27,10 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <h3 className="font-heading text-3xl mb-6 tracking-wide">Atelier</h3>
             <p className="font-body text-gray-400 mb-6 leading-relaxed">
@@ -57,10 +57,10 @@ export function Footer() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <h4 className="font-body font-medium mb-6 text-sm tracking-widest uppercase">
               Quick Links
@@ -86,10 +86,10 @@ export function Footer() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <h4 className="font-body font-medium mb-6 text-sm tracking-widest uppercase">
               Contact
@@ -111,10 +111,10 @@ export function Footer() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            viewport={{ once: true, margin: "-50px" }}
           >
             <h4 className="font-body font-medium mb-6 text-sm tracking-widest uppercase">
               Newsletter
@@ -147,8 +147,8 @@ export function Footer() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.8 }}
+          viewport={{ once: true, margin: "-30px" }}
           className="border-t border-white/10 mt-16 pt-8 text-center font-body text-gray-500 text-sm"
         >
           <p>&copy; 2026 Atelier Interior Design. All rights reserved.</p>

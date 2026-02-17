@@ -90,7 +90,7 @@ export function AboutPage() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
               className="font-body text-sm tracking-[0.3em] uppercase text-white/70 mb-6"
             >
               About Us
@@ -99,7 +99,7 @@ export function AboutPage() {
               <motion.h1
                 initial={{ y: 80, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, delay: 0.3, ease }}
+                transition={{ duration: 1, delay: 0.5, ease }}
                 className="font-heading text-6xl md:text-8xl mb-6"
               >
                 Meet Our <span className="italic">Team</span>
@@ -108,7 +108,7 @@ export function AboutPage() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
+              transition={{ duration: 1, delay: 0.8 }}
               className="font-body text-lg md:text-xl max-w-2xl mx-auto font-light"
             >
               A collective of passionate designers dedicated to creating spaces
@@ -123,10 +123,10 @@ export function AboutPage() {
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.id}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.15, ease }}
-              viewport={{ once: true, margin: "-50px" }}
+              initial={{ opacity: 0, y: 70, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.9, delay: index * 0.25, ease }}
+              viewport={{ once: true, margin: "-80px" }}
               whileHover={{ y: -8 }}
               className="bg-white rounded-2xl overflow-hidden shadow-lg group"
             >
@@ -157,79 +157,90 @@ export function AboutPage() {
 
       <section className="bg-white py-32">
         <div className="max-w-4xl mx-auto px-8 text-center">
-          <motion.div
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease }}
+            viewport={{ once: true, margin: "-80px" }}
+            className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
+          >
+            Since 2010
+          </motion.p>
+          <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.15, ease }}
+            viewport={{ once: true, margin: "-80px" }}
+            className="font-heading text-5xl md:text-6xl text-studio-black mb-4"
           >
-            <p className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4">
-              Since 2010
-            </p>
-            <h2 className="font-heading text-5xl md:text-6xl text-studio-black mb-4">
-              Our <span className="italic">Story</span>
-            </h2>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="w-24 h-[1px] bg-gold mx-auto mb-10"
-            />
-            <div className="space-y-6">
-              {[
-                "Founded in 2010, Atelier emerged from a simple belief: that the spaces we inhabit should be more than just aesthetically pleasing\u2014they should tell our stories, reflect our values, and enhance our daily lives.",
-                "What began as a small studio in Brooklyn has evolved into a full-service design firm, trusted by discerning clients across New York and beyond. Our portfolio spans elegant residences, sophisticated commercial spaces, and boutique hospitality venues.",
-                "Every project we undertake is approached with fresh eyes and an open heart, ensuring that the final design is as unique as the people who will live, work, and gather within it.",
-              ].map((text, i) => (
-                <motion.p
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, delay: 0.2 + i * 0.15 }}
-                  viewport={{ once: true }}
-                  className="font-body text-lg text-gray-600 leading-relaxed"
-                >
-                  {text}
-                </motion.p>
-              ))}
-            </div>
-          </motion.div>
+            Our <span className="italic">Story</span>
+          </motion.h2>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            viewport={{ once: true, margin: "-80px" }}
+            className="w-24 h-[1px] bg-gold mx-auto mb-10"
+          />
+          <div className="space-y-6">
+            {[
+              "Founded in 2010, Atelier emerged from a simple belief: that the spaces we inhabit should be more than just aesthetically pleasing\u2014they should tell our stories, reflect our values, and enhance our daily lives.",
+              "What began as a small studio in Brooklyn has evolved into a full-service design firm, trusted by discerning clients across New York and beyond. Our portfolio spans elegant residences, sophisticated commercial spaces, and boutique hospitality venues.",
+              "Every project we undertake is approached with fresh eyes and an open heart, ensuring that the final design is as unique as the people who will live, work, and gather within it.",
+            ].map((text, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.5 + i * 0.2, ease }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="font-body text-lg text-gray-600 leading-relaxed"
+              >
+                {text}
+              </motion.p>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="py-32 px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <p className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4">
+          <div className="text-center mb-20">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
+            >
               What We Stand For
-            </p>
-            <h2 className="font-heading text-5xl md:text-6xl text-studio-black mb-4">
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.15, ease }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="font-heading text-5xl md:text-6xl text-studio-black mb-4"
+            >
               Our <span className="italic">Values</span>
-            </h2>
+            </motion.h2>
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              viewport={{ once: true, margin: "-80px" }}
               className="w-24 h-[1px] bg-gold mx-auto"
             />
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: index * 0.1, ease }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.15 + index * 0.18, ease }}
+                viewport={{ once: true, margin: "-50px" }}
                 whileHover={{ y: -8, transition: { duration: 0.3 } }}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-500 group"
               >

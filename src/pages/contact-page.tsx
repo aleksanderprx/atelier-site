@@ -53,7 +53,7 @@ export function ContactPage() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
             className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
           >
             Get in Touch
@@ -61,7 +61,7 @@ export function ContactPage() {
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease }}
+            transition={{ duration: 0.9, delay: 0.35, ease }}
             className="font-heading text-6xl md:text-7xl text-studio-black mb-6"
           >
             Let's Create <span className="italic">Together</span>
@@ -69,13 +69,13 @@ export function ContactPage() {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="w-24 h-[1px] bg-gold mx-auto mb-6"
           />
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="font-body text-lg text-gray-500"
           >
             We'd love to hear about your project. Reach out to start a
@@ -87,9 +87,9 @@ export function ContactPage() {
       <section className="max-w-7xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease }}
+            transition={{ duration: 0.9, delay: 0.5, ease }}
             className="bg-white rounded-2xl p-10 shadow-lg"
           >
             <h2 className="font-heading text-3xl text-studio-black mb-8">
@@ -112,7 +112,7 @@ export function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
+                transition={{ delay: 0.7 }}
               >
                 <label
                   htmlFor="name"
@@ -135,7 +135,7 @@ export function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45 }}
+                transition={{ delay: 0.82 }}
               >
                 <label
                   htmlFor="email"
@@ -158,7 +158,7 @@ export function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.94 }}
               >
                 <label
                   htmlFor="projectType"
@@ -186,7 +186,7 @@ export function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.55 }}
+                transition={{ delay: 1.06 }}
               >
                 <label
                   htmlFor="budget"
@@ -213,7 +213,7 @@ export function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
+                transition={{ delay: 1.18 }}
               >
                 <label
                   htmlFor="message"
@@ -236,7 +236,7 @@ export function ContactPage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.65 }}
+                transition={{ delay: 1.3 }}
               >
                 <motion.button
                   type="submit"
@@ -252,9 +252,9 @@ export function ContactPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease }}
+            transition={{ duration: 0.9, delay: 0.7, ease }}
             className="space-y-8"
           >
             <div className="bg-white rounded-2xl p-10 shadow-lg">
@@ -283,7 +283,7 @@ export function ContactPage() {
                     key={title}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5 + i * 0.1 }}
+                    transition={{ delay: 0.9 + i * 0.15 }}
                     className="flex items-start gap-4"
                   >
                     <div className="w-12 h-12 bg-beige rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-gold transition-colors duration-300">
@@ -316,9 +316,9 @@ export function ContactPage() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 1.2, duration: 0.8, ease }}
               className="bg-white rounded-2xl p-4 shadow-lg overflow-hidden h-[400px]"
             >
               <div className="w-full h-full bg-beige rounded-xl flex items-center justify-center">

@@ -181,18 +181,12 @@ export function HomePage() {
 
       {/* Featured Projects */}
       <section className="py-32 px-8 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease }}
+            viewport={{ once: true, margin: "-100px" }}
             className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
           >
             Portfolio
@@ -200,8 +194,8 @@ export function HomePage() {
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.15, ease }}
+            viewport={{ once: true, margin: "-100px" }}
             className="font-heading text-5xl md:text-7xl text-studio-black mb-6"
           >
             Featured Projects
@@ -209,29 +203,29 @@ export function HomePage() {
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.35 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="w-24 h-[1px] bg-gold mx-auto mb-6"
           />
           <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true, margin: "-100px" }}
             className="font-body text-lg text-gray-500 max-w-2xl mx-auto"
           >
             A curated selection of our most transformative interior design projects
           </motion.p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <Link to="/projects" key={project.id}>
               <motion.div
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.15, ease }}
-                viewport={{ once: true, margin: "-50px" }}
+                initial={{ opacity: 0, y: 70, scale: 0.97 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.9, delay: 0.15 + index * 0.2, ease }}
+                viewport={{ once: true, margin: "-80px" }}
                 whileHover={{ y: -8 }}
                 className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
               >
@@ -263,7 +257,7 @@ export function HomePage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
           viewport={{ once: true }}
           className="text-center mt-16"
         >
@@ -283,20 +277,27 @@ export function HomePage() {
       <section ref={philosophyRef} className="py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <p className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4">
+            <div>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease }}
+                viewport={{ once: true, margin: "-80px" }}
+                className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
+              >
                 Our Philosophy
-              </p>
-              <h2 className="font-heading text-5xl md:text-6xl text-studio-black mb-10 leading-[1.1]">
+              </motion.p>
+              <motion.h2
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.15, ease }}
+                viewport={{ once: true, margin: "-80px" }}
+                className="font-heading text-5xl md:text-6xl text-studio-black mb-10 leading-[1.1]"
+              >
                 Design Is How
                 <br />
                 <span className="italic">We Tell Stories</span>
-              </h2>
+              </motion.h2>
               <div className="space-y-6">
                 {[
                   "We believe that exceptional design is not about following trends, but about creating timeless spaces that resonate with the people who inhabit them.",
@@ -305,22 +306,22 @@ export function HomePage() {
                 ].map((text, i) => (
                   <motion.p
                     key={i}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 25 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: 0.2 + i * 0.15, ease }}
-                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, delay: 0.35 + i * 0.2, ease }}
+                    viewport={{ once: true, margin: "-50px" }}
                     className="font-body text-lg text-gray-600 leading-relaxed"
                   >
                     {text}
                   </motion.p>
                 ))}
               </div>
-            </motion.div>
+            </div>
             <motion.div
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, ease }}
-              viewport={{ once: true, margin: "-100px" }}
+              initial={{ opacity: 0, x: 80, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.4, ease }}
+              viewport={{ once: true, margin: "-80px" }}
               className="relative h-[650px] rounded-2xl overflow-hidden"
             >
               <motion.img
@@ -338,54 +339,67 @@ export function HomePage() {
       {/* Testimonials */}
       <section className="py-32 px-8 bg-beige overflow-hidden">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <p className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4">
+          <div className="text-center mb-20">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
+            >
               Testimonials
-            </p>
-            <h2 className="font-heading text-5xl md:text-6xl text-studio-black mb-6">
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.15, ease }}
+              viewport={{ once: true, margin: "-80px" }}
+              className="font-heading text-5xl md:text-6xl text-studio-black mb-6"
+            >
               Client Stories
-            </h2>
+            </motion.h2>
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              viewport={{ once: true, margin: "-80px" }}
               className="w-24 h-[1px] bg-gold mx-auto"
             />
-          </motion.div>
+          </div>
 
-          <Slider {...sliderSettings}>
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="px-4">
-                <div className="bg-white rounded-3xl p-14 shadow-lg">
-                  <p className="font-heading text-2xl md:text-3xl text-studio-black mb-10 italic leading-relaxed">
-                    &ldquo;{testimonial.text}&rdquo;
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center">
-                      <span className="font-body font-medium text-white text-lg">
-                        {testimonial.author.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <p className="font-body font-medium text-studio-black">
-                        {testimonial.author}
-                      </p>
-                      <p className="font-body text-sm text-gray-500">
-                        {testimonial.project}
-                      </p>
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease }}
+            viewport={{ once: true, margin: "-50px" }}
+          >
+            <Slider {...sliderSettings}>
+              {testimonials.map((testimonial) => (
+                <div key={testimonial.id} className="px-4">
+                  <div className="bg-white rounded-3xl p-14 shadow-lg">
+                    <p className="font-heading text-2xl md:text-3xl text-studio-black mb-10 italic leading-relaxed">
+                      &ldquo;{testimonial.text}&rdquo;
+                    </p>
+                    <div className="flex items-center gap-4">
+                      <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center">
+                        <span className="font-body font-medium text-white text-lg">
+                          {testimonial.author.charAt(0)}
+                        </span>
+                      </div>
+                      <div>
+                        <p className="font-body font-medium text-studio-black">
+                          {testimonial.author}
+                        </p>
+                        <p className="font-body text-sm text-gray-500">
+                          {testimonial.project}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </Slider>
+              ))}
+            </Slider>
+          </motion.div>
         </div>
       </section>
     </div>

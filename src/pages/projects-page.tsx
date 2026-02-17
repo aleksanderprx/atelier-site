@@ -108,16 +108,11 @@ export function ProjectsPage() {
   return (
     <div className="pt-32 pb-24 px-8 min-h-screen overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.8, delay: 0.15 }}
             className="font-body text-sm tracking-[0.3em] uppercase text-gold mb-4"
           >
             Our Work
@@ -125,7 +120,7 @@ export function ProjectsPage() {
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease }}
+            transition={{ duration: 0.9, delay: 0.35, ease }}
             className="font-heading text-6xl md:text-7xl text-studio-black mb-6"
           >
             Our Portfolio
@@ -133,24 +128,24 @@ export function ProjectsPage() {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="w-24 h-[1px] bg-gold mx-auto mb-6"
           />
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             className="font-body text-lg text-gray-500 max-w-2xl mx-auto"
           >
             Explore our collection of thoughtfully designed spaces that blend
             timeless elegance with modern functionality
           </motion.p>
-        </motion.div>
+        </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
           className="flex flex-wrap justify-center gap-4 mb-16"
         >
           {categories.map((category) => (
@@ -185,11 +180,11 @@ export function ProjectsPage() {
                 {filteredProjects.map((project, index) => (
                   <motion.div
                     key={project.id}
-                    initial={{ opacity: 0, y: 40 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, y: 50, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{
-                      duration: 0.6,
-                      delay: Math.min(index * 0.08, 0.4),
+                      duration: 0.7,
+                      delay: Math.min(index * 0.12, 0.7),
                       ease,
                     }}
                     whileHover={{ y: -6 }}
